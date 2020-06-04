@@ -148,7 +148,15 @@
         <div class="row masonry-wrap">
        <h5><a href="https://github.com/clarence-lang/clarence"> Clarence programming language</a></h5>
         <p>Clarence is a dynamic, embeddable scripting-language. It's syntax are highly inspired by Clojure. However, it features aweful new modifications on it's vm. With Clarence, you're allowed to write code, that even writes code for you! The entire core (vm, parser, interpreter, bytecode) is pretty small, you could implement it in nearly a weekend! It was implemented using Clarence itselfe (self-host).</p>
-            <pre><code>Clarence</code></pre>
+            <pre><code>; This is a example program of Clarence
+            (mac makeReduce name operator
+  `(def ,name ...args
+    (if (isnt args.length 0)
+        (args.reduce {,operator #0 #1}))))
+
+(makeReduce mul *)
+(mul 2 2)
+            </code></pre>
             <h5> <a href="https://github.com/timo-cmd/Juno-lang"> Juno - implementing a language in one week</a></h5>
             <p>Juno's syntax is inspired by python, scala and by Objective-C. Think a python-syntax, that is class-based(like scala) and that is finally wrapped up by an objective-c syntax. Really accurate! I've chosen those syntaxes because they match the requirements for dynamic languages. Juno is implemented in less than 660 Lines of JavaScript. This mustn't mean, it isn't powerful... Juno coveres a huge environment and concepts such: control flow, generic variable assigns, recursive functions, first-order functions, classes, superclasses, a multi-threading system and much more...</p>
             <h5> <a href="https://github.com/timo-cmd/ASPL"> ASPL - Adaptive stack-based programming</a></h5>
